@@ -3,8 +3,7 @@ services:
     build: .
     ports:
       - "3005:3005"
-    env_file:
-      - .env.local
+    
     volumes:
       # Optional: mount server-providers.yml for provider config
       # - ./server-providers.yml:/app/server-providers.yml:ro
