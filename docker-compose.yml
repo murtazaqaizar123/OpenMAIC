@@ -3,6 +3,12 @@ services:
     build: .
     ports:
       - "3005:3005"
+    environment:
+      # --- Crucial LLM Settings ---
+      - OPENAI_BASE_URL=http://ollama-api.q-solutions.pk/v1
+      - OPENAI_API_KEY=cb4ea6ed-4ecf-485c-9666-2726365da1e7
+      - OPENAI_MODELS=Qwen3-VL:latest
+      - DEFAULT_MODEL=openai:Qwen3-VL:latest
     
     volumes:
       # Optional: mount server-providers.yml for provider config
